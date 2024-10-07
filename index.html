@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica 3</title>
+        <style>
+            body {
+                background-color: #f0f0f0; /* Fondo general de la página */
+            }
+            h2 {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 36px; /* Tamaño del título */
+                margin-bottom: 30px; /* Espacio debajo del título */
+                padding: 20px; /* Espacio dentro del margen */
+                text-align: center; /* Centrar el título */
+                border: 5px solid #D3D3D3; /* Margen claro (gris claro) */
+                background-color: #4CAF50; /* Fondo contrastante (verde) */
+                color: white; /* Texto en blanco para contraste */
+            }
+            .image-row {
+                display: flex;
+                justify-content: center; /* Centrar horizontalmente */
+                align-items: center;     /* Centrar verticalmente */
+                gap: 20px;               /* Espacio entre imágenes */
+                background-color: #333;  /* Fondo oscuro para las imágenes */
+                padding: 20px;           /* Espacio alrededor de las imágenes */
+                border-radius: 10px;     /* Bordes redondeados */
+            }
+            img {
+                background-color: #fff; /* Fondo blanco detrás de cada imagen */
+                padding: 10px;          /* Espacio alrededor de cada imagen */
+                border-radius: 5px;     /* Bordes ligeramente redondeados */
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Practica 3</h2>
+
+        <div class="image-row">
+            <button type="button" onclick="toggleImage()"> 
+                <img src="2.png" width="300px">
+            </button>
+
+            <img id="demo" src="3.png" width="300px">
+        </div>
+
+        <script>
+            function toggleImage() {
+                var img = document.getElementById('demo');
+                // Alternar entre las imágenes 1.png y 3.png, ajustando los tamaños
+                if (img.src.includes('3.png')) {
+                    img.src = '1.png';
+                    img.width = 600;
+                } else {
+                    img.src = '3.png';
+                    img.width = 300;
+                }
+            }
+        </script>
+    </body>
+</html>
